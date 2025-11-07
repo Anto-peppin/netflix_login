@@ -28,8 +28,8 @@ const Main = () => {
     <div>
       <Nav/>
 <div className='flex justify-center items-center w-full mt-10 px-2' style={{height:'calc(100vh - 120px)'}} >
-   <div className="bg-background relative flex size-full max-w-lg  justify-center overflow-hidden rounded-lg border px-40 pt-8 pb-40 md:pb-60">
-      <span className="pointer-events-none bg-linear-to-b from-red-500 to-red-800 bg-clip-text text-center text-6xl sm:text-6xl md:text-6xl lg:text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
+   <div className="bg-background relative flex size-full max-w-lg  justify-center overflow-hidden rounded-lg px-40 pt-8 pb-40 md:pb-60">
+      <span className="pointer-events-none bg-linear-to-b from-red-300 to-red-900 bg-clip-text text-center text-6xl sm:text-6xl md:text-6xl lg:text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
         Welcome
       </span>
       <Globe className="top-28" />

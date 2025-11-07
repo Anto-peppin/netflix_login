@@ -44,7 +44,7 @@ navigate('/login')
   const navigate = useNavigate()
   
   return (
-    <div className="w-full relative min-h-screen pb-4">
+    <div className="w-full relative min-h-screen pb-4 ">
       <Nav />
 
       <div className="w-full h-full bg-black absolute -z-1 top-0 left-0">
@@ -55,18 +55,19 @@ navigate('/login')
         />
       </div>
 
-     <form onSubmit={handleSubmit(formSub)}>
+
+       <form style={{minHeight:'calc(100vh - 110px)'}} className="flex items-center" onSubmit={handleSubmit(formSub)}>
        <div className="bg-black/85 mt-7 relative text-white p-10 w-[90%]  sm:w-[70%] md:w-[65%]  lg:w-[50%] mx-auto flex flex-col gap-6 ">
         <h2 className="text-4xl font-medium ">Sign Up</h2>
         <div>
          <div className="mb-3 flex flex-col gap-1">
-           <input {...register('mail')} className={`p-2 bg-[#333333] rounded w-full border-0  outline-0 ${errors?.mail?'border-b-2 border-red-500':''} `} type="text" placeholder="Email or Phone number"/>
+           <input {...register('mail')} className={`p-2 text-xl bg-[#333333] rounded w-full border-0  outline-0 ${errors?.mail?'border-b-2 border-red-500':''} `} type="text" placeholder="Email or Phone number"/>
           {
             errors?.mail &&  <p className="text-red-400 text-[12px] flex items-center"><VscErrorSmall className="text-red-400 text-xl" /> {errors.mail.message}</p>
           }
          </div>
          <div>
-          <input {...register('password')} className={`p-2 bg-[#333333] rounded w-full border-0  outline-0 ${errors?.password?'border-b-2 border-red-500':''} `} placeholder="password" />
+          <input {...register('password')} className={`p-2 text-xl bg-[#333333] rounded w-full border-0  outline-0 ${errors?.password?'border-b-2 border-red-500':''} `} placeholder="password" />
 {
               errors?.password &&  <p className="text-red-400 text-[12px] flex items-center"><VscErrorSmall className="text-red-400 text-xl" /> {errors.password.message}</p>
 
@@ -91,6 +92,7 @@ navigate('/login')
         </p>
       </div>
      </form>
+
     </div>
   );
 };
